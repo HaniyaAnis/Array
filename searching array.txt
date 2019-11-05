@@ -1,0 +1,39 @@
+
+DECLARE Marks:ARRAY[<1>:<8>] OF INTEGER
+DECLARE StuMarks AS INTEGER
+DECLARE Index AS INTEGER
+DECLARE count AS INTEGER
+DECLARE a AS INTEGER
+DECLARE Counter AS INTEGER
+DECALRE Found AS BOOLEAN
+
+stumarks = 0
+index = 0
+a = 0
+count = 0
+Found = false
+Counter = 0
+
+FOR COUNT = 1 TO 8
+MARKS[COUNT] = 0
+NEXT COUNT
+
+FOR Index = 1 to 8
+OUTPUT " ENTER MARKS OF STUDENT NO" & " " & Index
+INPUT Stumarks
+marks[index] = stumarks
+next index
+
+
+output "enter marks to be searched in array: "
+input a
+FOR counter = 1 To LENGTH(MARKS)
+IF marks[counter] = a
+  THEN Found = TRUE
+EXIT FOR
+ENDIF
+NEXT
+
+IF Found = true 
+  THEN output a & " " & "is found in array at location " & counter
+endif
